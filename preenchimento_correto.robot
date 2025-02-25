@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 
+${URL}                    http://localhost:3000/
 ${CAMPO_NOME}             id:form-nome
 ${CAMPO_CARGO}            id:form-cargo
 ${CAMPO_IMAGEM}           id:form-imagem
@@ -15,6 +16,7 @@ ${OPCAO_DEVOPS}           //option[contains(.,'Devops')]
 ${OPCAO_UX}               //option[contains(.,'UX e Design')]
 ${OPCAO_MOBILE}           //option[contains(.,'Mobile')]
 ${OPCAO_INOVACAO}         //option[contains(.,'Inovação e Gestão')]
+${CARD_COLABORADOR}             class:colaborador
 
 *** Test Cases ***
 
@@ -26,7 +28,7 @@ Verificar se ao preencher os campos do formulário corretamente os dados são in
 
 *** Keywords ***
 Dado que eu acesse o Organo
-    Open Browser    url=http://localhost:3000/    browser=Chrome
+    Open Browser    ${URL}   browser=Chrome
 
 E preencha os campos do formulário
 
@@ -35,12 +37,10 @@ E preencha os campos do formulário
     Input Text    ${CAMPO_IMAGEM}    https://picsum.photos/200/300
     Click Element    ${CAMPO_TIME}    
     Click Element    ${OPCAO_PROGRAMACAO}
-    Click Element    id:form-botao
-    Element Should Be Visible    class:colaborador    
 
 E clique no botão criar card   
-    Click Element    id:form-botao
+    Click Element    ${BOTAO_CARD}
 
 Então identificar o card no time esperado
-    Element Should Be Visible    class:colaborador    
+    Element Should Be Visible    ${CARD_COLABORADOR}        
     

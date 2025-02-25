@@ -1,92 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-25T16:38:28.769482" rpa="false" schemaversion="5">
-<suite id="s1" name="Primeiro Teste" source="C:\cursos alura\Robot Framework - automatizando testes no padrão BDD\primeiro_teste.robot">
-<test id="s1-t1" name="Verificar se ao preencher os campos do formulário corretamente os dados são inseridos na lista e se um novo card é criado no time esperado" line="21">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-25T16:49:49.155814" rpa="false" schemaversion="5">
+<suite id="s1" name="Preenchimento Correto" source="C:\cursos alura\Robot Framework - automatizando testes no padrão BDD\preenchimento_correto.robot">
+<test id="s1-t1" name="Verificar se ao preencher os campos do formulário corretamente os dados são inseridos na lista e se um novo card é criado no time esperado" line="23">
 <kw name="Dado que eu acesse o Organo">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-25T16:38:29.114917" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
-<arg>url=http://localhost:3000/</arg>
+<msg time="2025-02-25T16:49:49.515526" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>${URL}</arg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-25T16:38:29.114615" elapsed="2.269303"/>
+<status status="PASS" start="2025-02-25T16:49:49.515167" elapsed="2.299636"/>
 </kw>
-<status status="PASS" start="2025-02-25T16:38:29.113341" elapsed="2.270902"/>
+<status status="PASS" start="2025-02-25T16:49:49.513831" elapsed="2.301221"/>
 </kw>
 <kw name="E preencha os campos do formulário">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T16:38:31.390019" level="INFO">Typing text 'isadora' into text field 'id:form-nome'.</msg>
+<msg time="2025-02-25T16:49:51.817102" level="INFO">Typing text 'isadora' into text field 'id:form-nome'.</msg>
 <arg>${CAMPO_NOME}</arg>
 <arg>isadora</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T16:38:31.389369" elapsed="0.159817"/>
+<status status="PASS" start="2025-02-25T16:49:51.816288" elapsed="0.158166"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T16:38:31.549965" level="INFO">Typing text 'Design' into text field 'id:form-cargo'.</msg>
+<msg time="2025-02-25T16:49:51.975148" level="INFO">Typing text 'Design' into text field 'id:form-cargo'.</msg>
 <arg>${CAMPO_CARGO}</arg>
 <arg>Design</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T16:38:31.549523" elapsed="0.107792"/>
+<status status="PASS" start="2025-02-25T16:49:51.974721" elapsed="0.106330"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T16:38:31.657817" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
+<msg time="2025-02-25T16:49:52.081800" level="INFO">Typing text 'https://picsum.photos/200/300' into text field 'id:form-imagem'.</msg>
 <arg>${CAMPO_IMAGEM}</arg>
 <arg>https://picsum.photos/200/300</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T16:38:31.657529" elapsed="0.140487"/>
+<status status="PASS" start="2025-02-25T16:49:52.081371" elapsed="0.138270"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T16:38:31.798523" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
+<msg time="2025-02-25T16:49:52.220218" level="INFO">Clicking element 'class:lista-suspensa'.</msg>
 <arg>${CAMPO_TIME}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T16:38:31.798232" elapsed="0.090642"/>
+<status status="PASS" start="2025-02-25T16:49:52.219888" elapsed="0.104411"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T16:38:31.889519" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
+<msg time="2025-02-25T16:49:52.324986" level="INFO">Clicking element '//option[contains(.,'Programação')]'.</msg>
 <arg>${OPCAO_PROGRAMACAO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T16:38:31.889152" elapsed="0.061814"/>
+<status status="PASS" start="2025-02-25T16:49:52.324618" elapsed="0.058609"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-25T16:38:41.952467" level="INFO">Slept 10 seconds.</msg>
-<arg>10s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-25T16:38:31.951242" elapsed="10.001446"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T16:38:41.953201" level="INFO">Clicking element 'id:form-botao'.</msg>
-<arg>id:form-botao</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T16:38:41.952938" elapsed="0.098680"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-25T16:38:42.115724" level="INFO">Element 'class:colaborador' is displayed.</msg>
-<arg>class:colaborador</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T16:38:42.051906" elapsed="0.063964"/>
-</kw>
-<status status="PASS" start="2025-02-25T16:38:31.388819" elapsed="10.727244"/>
+<status status="PASS" start="2025-02-25T16:49:51.815757" elapsed="0.567695"/>
 </kw>
 <kw name="E clique no botão criar card">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T16:38:42.119563" level="INFO">Clicking element 'id:form-botao'.</msg>
-<arg>id:form-botao</arg>
+<msg time="2025-02-25T16:49:52.384740" level="INFO">Clicking element 'id:form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T16:38:42.119233" elapsed="0.224948"/>
+<status status="PASS" start="2025-02-25T16:49:52.384396" elapsed="0.117923"/>
 </kw>
-<status status="PASS" start="2025-02-25T16:38:42.118641" elapsed="0.225735"/>
+<status status="PASS" start="2025-02-25T16:49:52.383915" elapsed="0.118686"/>
 </kw>
 <kw name="Então identificar o card no time esperado">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-02-25T16:38:42.572848" level="INFO">Element 'class:colaborador' is displayed.</msg>
-<arg>class:colaborador</arg>
+<msg time="2025-02-25T16:49:52.534998" level="INFO">Element 'class:colaborador' is displayed.</msg>
+<arg>${CARD_COLABORADOR}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T16:38:42.364952" elapsed="0.208066"/>
+<status status="PASS" start="2025-02-25T16:49:52.503612" elapsed="0.031511"/>
 </kw>
-<status status="PASS" start="2025-02-25T16:38:42.364386" elapsed="0.208865"/>
+<status status="PASS" start="2025-02-25T16:49:52.503085" elapsed="0.032168"/>
 </kw>
-<status status="PASS" start="2025-02-25T16:38:29.112361" elapsed="13.461443"/>
+<status status="PASS" start="2025-02-25T16:49:49.512843" elapsed="3.022775"/>
 </test>
-<status status="PASS" start="2025-02-25T16:38:28.771152" elapsed="13.804065"/>
+<status status="PASS" start="2025-02-25T16:49:49.157453" elapsed="3.379785"/>
 </suite>
 <statistics>
 <total>
@@ -95,7 +77,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Primeiro Teste" id="s1" pass="1" fail="0" skip="0">Primeiro Teste</stat>
+<stat name="Preenchimento Correto" id="s1" pass="1" fail="0" skip="0">Preenchimento Correto</stat>
 </suite>
 </statistics>
 <errors>
