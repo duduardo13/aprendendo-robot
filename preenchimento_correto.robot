@@ -21,7 +21,6 @@ ${OPCAO_INOVACAO}         //option[contains(.,'Inovação e Gestão')]
 ${CARD_COLABORADOR}             class:colaborador
 
 *** Test Cases ***
-
 Verificar se ao preencher os campos do formulário corretamente os dados são inseridos na lista e se um novo card é criado no time esperado
     
     Dado que preencha os campos do formulário
