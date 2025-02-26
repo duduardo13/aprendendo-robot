@@ -1,5 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    setup_teardown.robot
+Test Setup    Dado que eu acesse o Organo
+Test Teardown    Fechar o navegador
 
 *** Variables ***
 
@@ -21,16 +24,14 @@ ${CARD_COLABORADOR}             class:colaborador
 *** Test Cases ***
 
 Verificar se ao preencher os campos do formulário corretamente os dados são inseridos na lista e se um novo card é criado no time esperado
-    Dado que eu acesse o Organo
-    E preencha os campos do formulário
+    
+    Dado que preencha os campos do formulário
     E clique no botão criar card
     Então identificar o card no time esperado
 
 *** Keywords ***
-Dado que eu acesse o Organo
-    Open Browser    ${URL}   browser=Chrome
 
-E preencha os campos do formulário
+Dado que preencha os campos do formulário
 
     Input Text    ${CAMPO_NOME}      isadora
     Input Text    ${CAMPO_CARGO}     Design
