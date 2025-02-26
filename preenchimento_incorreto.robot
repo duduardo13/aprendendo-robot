@@ -1,9 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    setup_teardown.robot
+Test Setup    Dado que eu acesse o Organo
+Test Teardown    Fechar o navegador
 
 *** Variables ***
 
-${URL}                    http://localhost:3000/
 ${CAMPO_NOME}             id:form-nome
 ${CAMPO_CARGO}            id:form-cargo
 ${CAMPO_IMAGEM}           id:form-imagem
